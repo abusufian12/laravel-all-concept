@@ -8,6 +8,10 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function index(){
-        return Post::get();
+        //$post = Post::count();
+        $posts = Post::get();
+        //$post = count($post);
+        // dd($posts);
+        return view("posts.index",compact('posts'));
     }
 }
