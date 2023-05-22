@@ -1,14 +1,25 @@
 php artisan make:test PostControllerTest		// create test	
+
 php artisan make:test PostControllerTest --unit		// create test	
-vendor/bin/phpunit	// run unit test		
-./vendor/bin/phpunit	// run unit test		
+
+vendor/bin/phpunit	// run unit test	
+
+./vendor/bin/phpunit	// run unit test	
+
  php artisan test	// run test		
+ 
 php vendor/phpunit/phpunit/phpunit		// run unit test	
+
 vendor/bin/phpunit --filter test_example tests\Feature\UserTest.php			// run spacific test
+
 php artisan thinker	//for create factory		
-User::factory()->create()	//  after get thinker console		
+
+User::factory()->create()	//  after get thinker console	
+
 User::factory(10)->create()	// create 10 users on user table	
+
 App\Models\Post::factory()->create() // create post data using tinker	
+
 php artisan db:seed // seed Database table it's need to write "Post::factory(50)->create();" on DatabaseSeeder.php file
 
 
