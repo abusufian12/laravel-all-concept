@@ -16,6 +16,15 @@ class CountryMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
-    }
+        $array = [
+            'Bangladesh',
+            'Japan',
+            'USA',
+        ];
+
+        if (in_array($request->country, $array)) {
+            return $next($request);
+        }
+        return redirect()->to('/');
+     }
 }

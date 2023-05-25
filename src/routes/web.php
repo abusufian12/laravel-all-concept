@@ -33,6 +33,11 @@ Route::post('/checkin/{book}', 'CheckinBookController@store');
 Route::get('/posts', [PostController::class, 'index']);
 
 
+Route::get('/country', function(){
+    return view('country');
+})->middleware('country');
+
+
 // Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
