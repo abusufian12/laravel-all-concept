@@ -13,4 +13,7 @@ composer-update:
 data:
 	docker exec laravel-docker bash -c "php artisan migrate"
 	docker exec laravel-docker bash -c "php artisan db:seed"
+restart:
+	docker-compose restart
+
 
