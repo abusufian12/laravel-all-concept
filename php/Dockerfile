@@ -37,13 +37,16 @@ RUN docker-php-ext-install \
     iconv \
     xml \
     soap \
-    pcntl \
+    # pcntl \
     mbstring \
-    tokenizer \
+    # tokenizer \
     bz2 \
     zip \
     intl
 
+# Install PHP tokenizer extension
+RUN docker-php-ext-install tokenizer
+    
 # Install Postgre PDO
 RUN apt-get install -y libpq-dev \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
